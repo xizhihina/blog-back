@@ -6,6 +6,7 @@ import com.example.myweb.pojo.ArticleInfo;
 import com.example.myweb.pojo.MyInfo;
 import com.example.myweb.sercurity.VerifyAdminToken;
 import com.example.myweb.service.impl.BlogServiceImpl;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/blog")
 public class BlogController {
+    //@Resource
     @Autowired
     private BlogServiceImpl blogService;
 
