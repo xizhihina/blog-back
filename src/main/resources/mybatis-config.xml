@@ -4,9 +4,13 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
     <!--别名-->
     <typeAliases>
-        <package name="com.example.myweb.pojo"/>
+        <package name="com.blog.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -27,9 +31,9 @@
     </environments>
     <mappers>
         <!--加载sql映射文件-->
-        <!--<mapper resource="com.example.myweb.mapper.VisitCountMapper.xml"/>-->
+        <!--<mapper resource="com.blog.mapper.VisitCountMapper.xml"/>-->
 
         <!--Mapper代理方式-->
-        <package name="com.example.myweb.mapper"/>
+        <package name="com.blog.mapper"/>
     </mappers>
 </configuration>

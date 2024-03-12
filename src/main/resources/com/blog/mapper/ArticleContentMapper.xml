@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.mapper.ArticleContentMapper">
+    <insert id="add">
+        insert into article_content values(#{id},#{content})
+    </insert>
+    <update id="update">
+        update article_content set content=#{content} where id=#{id}
+    </update>
+    <select id="select" resultType="com.blog.pojo.ArticleContent">
+    <!--<select id="select" resultType="ArticleContent">&lt;!&ndash;有别名之后&ndash;&gt;-->
+    <!--<select id="select" resultMap="ArticleContent">&lt;!&ndash;改成mybatis-plus后不知道为什么要改成resultMap,但是改了之后还是会出问题，用了plus后不用别名就行了&ndash;&gt;-->
+        select * from article_content where id=#{id}
+    </select>
+    <delete id="delete">
+        delete from article_content where id=#{id}
+    </delete>
+</mapper>
